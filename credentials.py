@@ -5,7 +5,7 @@ class Credentials:
 
     """
 
-    user_credential = []
+    credential_detail = []
 
     def __init__(self,login_credential):
 
