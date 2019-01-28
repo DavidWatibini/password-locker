@@ -38,6 +38,18 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(len(User.user_detail),1)
 
+    def test_save_multiple_detail(self):
+
+        """
+        a method to check if we can save multiple user details to our details array
+        """
+
+        self.new_user.save_detail()
+        test_user = Contact("Test","user")
+        test_user.save_detail()
+        self.assertEqual(len(User.user_detail),2)
+
+
 
 if __name__ == '__main__':
     unittest.main()
