@@ -55,6 +55,24 @@ class TestUser(unittest.TestCase):
         test_user.save_detail()
         self.assertEqual(len(User.user_detail),3)
 
+    # def test_delete_detail(self):
+    #
+    #     self.new_user.save_detail()
+    #     test_user = User("Test","user")
+    #     test_user.save_detail()
+    #
+    #     self.new_user.delete_detail()
+    #     self.assertEqual(len(User.user_detail))
+
+    def test_display_all_details(self):
+
+        """
+        is a method that returns a list of all details saved
+        """
+
+        self.assertEqual(User.display_all_details(),User.user_detail)
+
+
 
 
 if __name__ == '__main__':
