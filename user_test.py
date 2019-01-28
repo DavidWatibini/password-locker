@@ -27,5 +27,17 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.login_account,"facebook")
         self.assertEqual(self.new_user.login_username,"watibini")
 
+    def test_save_detail(self):
+
+        """
+        the test_save_detail test is used to test if the contact object is saved into details
+
+        """
+
+        self.new_user.save_detail()
+
+        self.assertEqual(len(User.user_detail),1)
+
+
 if __name__ == '__main__':
     unittest.main()

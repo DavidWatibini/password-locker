@@ -1,6 +1,6 @@
 import unittest
 from credential import Credential
-class TestUser(unittest.TestCase):
+class TestCredential(unittest.TestCase):
 
     """
     Test class that defines test cases for the credential class behaviours,

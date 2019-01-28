@@ -7,6 +7,13 @@ class User:
 
     user_detail = []
 
+    def save_detail(self):
+
+        """
+        the method saves detail objects into the empty user_detail array
+        """
+        User.user_detail.append(self)
+
     def __init__(self,login_account,login_username):
 
         """
