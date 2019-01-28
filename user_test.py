@@ -15,6 +15,12 @@ class TestUser(unittest.TestCase):
 
         """
 
+        def tearDown(self):
+
+            """
+            tearDown method does clean up after each test case has runself.
+            """
+
         self.new_user = User("facebook","watibini")
 
     def test_init(self):
@@ -45,9 +51,9 @@ class TestUser(unittest.TestCase):
         """
 
         self.new_user.save_detail()
-        test_user = Contact("Test","user")
+        test_user = User("Test","user")
         test_user.save_detail()
-        self.assertEqual(len(User.user_detail),2)
+        self.assertEqual(len(User.user_detail),3)
 
 
 
