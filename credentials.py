@@ -14,7 +14,9 @@ class Credential:
 
         """
 
+        
         self.credential_detail = credential_detail
+
 
         """
         arguments for our __init__method will include the following.

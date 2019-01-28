@@ -1,5 +1,5 @@
 import unittest
-from credential import Credential
+from credentials import Credential
 class TestCredential(unittest.TestCase):
 
     """
@@ -15,7 +15,7 @@ class TestCredential(unittest.TestCase):
 
         """
 
-        self.new_credential = Credential("watinguyaz")
+        self.new_password = Credential("watinguyaz")
 
     def test_init(self):
 
@@ -24,7 +24,9 @@ class TestCredential(unittest.TestCase):
 
         """
 
-        self.assertEqual(self.new_user.credential,"watinguyaz")
+        self.assertEqual(self.new_password.credential_detail,"watinguyaz")
+
+
 
 if __name__ == '__main__':
     unittest.main()
