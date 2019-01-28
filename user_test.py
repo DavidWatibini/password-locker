@@ -1,4 +1,3 @@
 import unittest
 from user from User
-import credential from Credential
- 
+class TestUser(unittest.TestCase):
