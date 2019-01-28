@@ -7,13 +7,14 @@ class User:
 
     user_detail = []
 
-    def __init__(self,login_username):
+    def __init__(self,login_account,login_username):
 
         """
         the __init__method helps us define properties for our objectsself.
 
         """
 
+        self.login_account = login_account
         self.login_username = login_username
 
         """

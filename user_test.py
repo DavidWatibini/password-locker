@@ -8,4 +8,11 @@ class TestUser(unittest.TestCase):
 
     """
 
-    
+    def setUp(self):
+
+        """
+        this method runs before each test case, carries the instrctions of what is to be done
+
+        """
+
+        self.new_user = User("facebook","watibini")
