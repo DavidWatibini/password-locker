@@ -22,15 +22,19 @@ class User:
 
         User.user_detail.remove(self)
 
-    def __init__(self,login_account,login_username):
+    def __init__(self,first_name,last_name,username,password,confirm_password):
 
         """
         the __init__method helps us define properties for our objectsself.
 
         """
 
-        self.login_account = login_account
-        self.login_username = login_username
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.password =password
+        self.confirm_password = confirm_password
+
 
         """
         arguments for our __init__method will include the following.
