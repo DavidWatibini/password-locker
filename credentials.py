@@ -14,7 +14,7 @@ class Credential:
 
         """
 
-        
+
         self.credential_detail = credential_detail
 
 
