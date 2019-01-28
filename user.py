@@ -5,6 +5,8 @@ class User:
 
     """
 
+    user_detail = []
+
     def __init__(self,login_username):
 
         """
