@@ -26,7 +26,7 @@ def display_all_details():
     """
     function used to return all saved save_details
     """
-    return User.display_all_details
+    return User.display_all_details()
 
 # def gen_word(min, max):
 #     vowels = list('aeiou')
@@ -98,6 +98,50 @@ def main():
             print ('\n')
 
             print(f"{user_name} what else do you want to do?")
+
+        elif short_code =='2':
+
+            if display_all_details():
+
+                print(f"{user_name} here is a list of all your accounts")
+
+                print('\n')
+
+                for user in display_all_details():
+
+                    print(f"{user.account_name} {user.username}......{user.password}")
+
+                    print('\n')
+
+            else:
+
+                print('\n')
+
+                print(f" {user_name} You dont seem to have any contacts saved yet")
+
+                print('\n')
+
+                print(f"{user_name} Enter a user name you want to search for")
+
+                search_username = input()
+
+                if check_existing_user(search_username):
+
+                    search_username = find_user(search_username)
+
+                    print(f"{search_user.account_name} {search_user.username}")
+
+                    print('-' * 20)
+
+                    print(f"password.......{search_user.password}")
+
+                else:
+
+                     print(f"{user_name} That account does not exist")
+
+
+
+
 
 
 
