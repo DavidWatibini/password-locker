@@ -42,7 +42,7 @@ def find_user(username):
     the function is used check details from the saved save_details
     """
 
-    return User.user.find_by_username(username)
+    return User.find_by_username(username)
 
 def generatePassword(num):
    genpas = ''
@@ -62,18 +62,18 @@ def generatePassword(num):
 #
 # 	return word.capitalize()
 def main():
+    print('{:_^5}'.format('RE-INVENT THE WAY YOU SAVE YOUR PASSWORDS WITH OUR PASSWORD LOCKER APP'))
 
-    print("RE-INVENT THE WAY YOU SAVE YOUR PASSWORDS WITH OUR PASSWORD LOCKER APP")
 
     print('\n')
 
-    print("login")
+    print('{:_^20}'.format('login'))
 
     print('\n')
 
     print("please idetify yourself using your locker username")
 
-    user_name = input()
+    user_name = input().upper()
 
     print(f"Hello {user_name}, welcome to your password manager, how can we help you today")
 
@@ -87,6 +87,7 @@ def main():
         3-find accounts
         4-exit the locker\n''')
         print(list)
+
 
 
         short_code = input().lower()
@@ -109,7 +110,7 @@ def main():
 
 
             print("yes", "no")
-            ans = input()
+            ans = input().lower()
 
             if ans == 'yes':
 
@@ -125,10 +126,6 @@ def main():
 
 
             elif ans == 'no':
-                password = getpass.getpass('password:')
-                print("*********")
-
-
                 password = getpass.getpass('password:')
                 print("*********")
 
@@ -179,18 +176,22 @@ def main():
 
                 search_username = find_user(search_username)
 
-                search_username = find_user(search_username)
-
-                print(f"{search_user.account_name} {search_user.username}")
+                print(f"{search_username.account_name} {search_username.username}")
 
                 print('-' * 20)
 
-                print(f"password.......{search_user.password}")
-
+                print(f"password.......{search_username.password}")
             else:
-
-
                 print(f"{user_name} That account does not exist")
+
+        elif short_code == "4":
+
+            print("Bye .......")
+
+            break
+
+        else:
+            print("I really didn't get that. Please use the correct code")
 
 
 

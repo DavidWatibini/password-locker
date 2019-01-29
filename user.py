@@ -49,7 +49,7 @@ class User:
     def find_by_username(cls,username):
 
         for user in cls.user_detail:
-            if user.username == usename:
+            if user.username == username:
                 return user
 
     @classmethod
