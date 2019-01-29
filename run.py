@@ -3,6 +3,7 @@ from user import User
 import getpass
 import random
 import string
+dash = '-' * 60
 
 def create_account(account_name,username,password,confirm_password):
 
@@ -53,14 +54,6 @@ def generatePassword(num):
 
    return genpas
 
-# def gen_word(min, max):
-#     vowels = list('aeiou')
-# 	word = ''
-# 	syllables = min + int(random.random() * (max - min))
-# 	for i in range(0, syllables):
-# 		word += gen_syllable()
-#
-# 	return word.capitalize()
 def main():
     print('{:_^5}'.format('RE-INVENT THE WAY YOU SAVE YOUR PASSWORDS WITH OUR PASSWORD LOCKER APP'))
 
@@ -71,7 +64,7 @@ def main():
 
     print('\n')
 
-    print("please idetify yourself using your locker username")
+    print("Please idetify yourself using your locker USERNAME")
 
     user_name = input().upper()
 
@@ -82,10 +75,10 @@ def main():
     while True:
 
         list =('''
-        1-register a new account
-        2-display accounts
-        3-find accounts
-        4-exit the locker\n''')
+        1-Register a new account
+        2-Display accounts
+        3-Find accounts
+        4-Exit the locker\n''')
         print(list)
 
 
@@ -94,14 +87,17 @@ def main():
 
         if short_code == '1':
 
-            print(f"{user_name} please fill in the following")
+            print(f"{user_name} Please FILL IN the following")
 
             print("-"*10)
 
-            print ("account name")
+            print ("Account name")
+
             account_name = input()
 
-            print("username")
+            print('\n')
+
+            print("Username")
             username = input()
 
             print('\n')
@@ -120,6 +116,7 @@ def main():
 
                 print ('\n')
 
+
                 print(f"{user_name} {account_name} account of {username} created and password saved")
 
                 print ('\n')
@@ -136,7 +133,14 @@ def main():
 
                 print ('\n')
 
-                print(f"{user_name} {account_name} account of {username} created and password saved")
+                print(dash)
+
+                print(f"Hey {user_name}")
+                print(f"Your account name is {account_name}.com")
+                print(f"Your account username is {username}")
+                print("passwords encripted but can be viwed using option 2 / 3")
+
+                print(dash)
 
                 print ('\n')
 
@@ -147,15 +151,23 @@ def main():
 
             if display_all_details():
 
-                print(f"{user_name} here is a list of all your accounts")
+                print(f"{user_name} here is a list of all your saved accounts")
 
                 print('\n')
 
                 for user in display_all_details():
 
-                    print(f"{user.account_name} {user.username}......{user.password}")
+                    print(dash)
+
+                    print(f"Account is {user.account_name}.com")
+                    print(f"Account username is {user.username}")
+                    print(f"The account's password is {user.password} dont give out passwords")
+
+                    print(dash)
 
                     print('\n')
+
+                    print(f"{user_name} what else do you want to do?")
 
             else:
 
@@ -164,6 +176,8 @@ def main():
                 print(f" {user_name} You dont seem to have any contacts saved yet")
 
                 print('\n')
+
+                print(f"{user_name} what else do you want to do?")
 
         elif short_code == '3':
 
@@ -176,13 +190,20 @@ def main():
 
                 search_username = find_user(search_username)
 
-                print(f"{search_username.account_name} {search_username.username}")
+                print(dash)
 
-                print('-' * 20)
+                print(f"Account is {search_username.account_name}.com")
+                print(f"Account username is {search_username.username}")
+                print(f"Account password is {search_username.password} dont give out passwords")
 
-                print(f"password.......{search_username.password}")
+                print(dash)
+
+                print(f"{user_name} what else do you want to do?")
+
             else:
                 print(f"{user_name} That account does not exist")
+
+                print(f"{user_name} what else do you want to do?")
 
         elif short_code == "4":
 
@@ -192,6 +213,8 @@ def main():
 
         else:
             print("I really didn't get that. Please use the correct code")
+
+            print(f"{user_name} what else do you want to do?")
 
 
 
